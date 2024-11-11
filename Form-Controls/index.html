@@ -9,23 +9,76 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Product Pick</h1>
-  </header>
+ 
   <main>
+    <header>
+      <h1>Product Pick</h1>
+    </header>
   <form>
     <!-- write your html here-->
     <!-- try writing out the requirements first-->
-    <!-- name.email.color.size.delivry date -->
-    <label for="name">NAME :</label>
-    <input type="text" id="name" name="name" placeholder="Enter Your Name" required pattern="" minlength="2">
+    <div class="field">
+      <label for="name">NAME :</label>
+      <br>
+      <input type="text" id="name" name="name" placeholder="Enter Your Name" required pattern="[A-Za-z\s]+" minlength="2">
+
+    </div>
+    <div class="field">
+      <label for="email">EMAIL :</label>
+      <br>
+      <input type="email" id="email" name="email" placeholder="Enter Your Email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" minlength="2">
+
+    </div>
+
+
+      <div class="field">
+      <label for="color">COLOR :</label>
+      <br>
+      <select name="color" id="color">
+        <option label="RED" value="RED" id="red">RED</option>
+        <option label="GREEN" value="GREEN" id="green">GREEN</option>
+        <option label="BLUE" value="BLUE" id="blue">BLUE</option>
+        </select>
+      
+     </div>
+
+
+    <div class="field">
+    <label for="size">SIZE :</label>
+    <br>
+    <select name="size" id="size">
+      <option label="XS" value="XS">XS</option>
+      <option label="S" value="S">S</option>
+      <option label="M" value="M">M</option>
+      <option label="L" value="L">L</option>
+      <option label="XL" value="XL">XL</option>
+      <option label="XXL" value="XXL">XXL</option>
+    </select>
+    </div>
+
+
+    
+    <div class="field">
+      <label for="dte">Delivery Date :</label>
+      <input type="date" id="name" name="name" required min="06-11-2024" max="06-12-2024">
+
+    </div>
 
   </form>
 
-  </main>
+    <div id="buttons">
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </div>
+
+
   <footer>
-    <h2>By Khalil Ali</h2>
+    <h2>Designed By Khalil Ali</h2>
   </footer>
+
+
+  </main>
+
 </body>
 
 </html>
